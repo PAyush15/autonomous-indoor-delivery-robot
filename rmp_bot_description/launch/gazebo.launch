@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<launch>
+  <param command="$(find xacro)/xacro $(find rmp_bot_description)/urdf/rmp_bot.xacro" name="robot_description"/>
+  <node args="-param robot_description -urdf -model rmp_bot" name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"/>
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <!-- <arg name="world_name" value="$(find rmp_bot_description)/worlds/new_world.world"/> -->
+    <!--<arg name="world_name" value="$(find rmp_bot_description)/worlds/rmp_world.world"/>-->
+
+
+    <!-- <arg name="world_name" value="$(find rmp_bot_description)/worlds/rmp03.world" /> -->
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include>
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+ 
+</launch>

@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+
+<launch>
+  
+  <!-- Start Google Cartographer node with custom configuration file-->
+
+  <node name="cartographer_node" pkg="cartographer_ros" type="cartographer_node" args=" 
+    -configuration_directory $(find adbot_description)/config 
+    -configuration_basename lidar.lua" 
+        output="screen">
+  </node>
+
+</launch>

@@ -1,0 +1,612 @@
+<?xml version="1.0" ?>
+<robot name="adbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find adbot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find adbot_description)/urdf/adbot.trans" />
+<xacro:include filename="$(find adbot_description)/urdf/adbot.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.11754380395763744 -0.008309309696808766 0.044737562719863344"/>
+    <mass value="2.5803331622971"/>
+    <inertia ixx="0.008602" ixy="-9e-06" ixz="-2e-06" iyy="0.016169" iyz="0.0" izz="0.024359"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="body_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0068679490257481796 -3.768684144169615e-06 0.06860823819142574"/>
+    <mass value="7.889681962960808"/>
+    <inertia ixx="0.059229" ixy="-1.5e-05" ixz="-0.004781" iyy="0.061661" iyz="-6e-06" izz="0.072885"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.117786 0.008278 -0.051635"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/body_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.117786 0.008278 -0.051635"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/body_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lid_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0014890693996613257 0.07700001323512176 -0.06186218022886436"/>
+    <mass value="0.4707305565916595"/>
+    <inertia ixx="0.0017" ixy="0.0" ixz="0.0" iyy="0.000663" iyz="0.0" izz="0.001038"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.004214 0.085278 -0.188635"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/lid_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.004214 0.085278 -0.188635"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/lid_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_door_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.07423106191459591 -0.03892847356279871 -0.047700087861739654"/>
+    <mass value="0.42036269791037006"/>
+    <inertia ixx="0.001189" ixy="0.0" ixz="-0.000456" iyy="0.001385" iyz="2e-06" izz="0.000614"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.144786 0.010278 -0.198635"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/right_door_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.144786 0.010278 -0.198635"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/right_door_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_door_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0742039735006979 -0.03907149996696059 -0.0477422163015801"/>
+    <mass value="0.42036269791037045"/>
+    <inertia ixx="0.001189" ixy="-0.0" ixz="-0.000455" iyy="0.001385" iyz="-2e-06" izz="0.000614"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.144786 -0.071722 -0.198635"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/left_door_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.144786 -0.071722 -0.198635"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/left_door_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0346716352597857 0.028027770370615802 0.03526252267129079"/>
+    <mass value="1.3389387535639652"/>
+    <inertia ixx="0.000619" ixy="-2e-06" ixz="0.000159" iyy="0.000967" iyz="-3e-06" izz="0.001105"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.109166 0.035895 -0.172035"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.109166 0.035895 -0.172035"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0013912271839448143 6.567984359283872e-05 0.00038959398280194457"/>
+    <mass value="0.006742880602527746"/>
+    <inertia ixx="0.0" ixy="-0.0" ixz="-0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.005714 0.008278 -0.164635"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.005714 0.008278 -0.164635"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hcsr04_front_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.00033089762949217727 0.012995811567042905 0.03185305648833167"/>
+    <mass value="0.048884344845399004"/>
+    <inertia ixx="1e-05" ixy="-0.0" ixz="-0.0" iyy="2e-06" iyz="0.0" izz="9e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.004214 0.021278 -0.059835"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/hcsr04_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.004214 0.021278 -0.059835"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/hcsr04_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hcsr04_right_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.01300425203146785 -0.0005765716561509093 0.031853056488138104"/>
+    <mass value="0.048884344845399254"/>
+    <inertia ixx="2e-06" ixy="0.0" ixz="0.0" iyy="1e-05" iyz="0.0" izz="9e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.078286 0.092278 -0.045835"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/hcsr04_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.078286 0.092278 -0.045835"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/hcsr04_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="hcsr04_left_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.012995848695311688 0.0005765981263933795 0.031853056488331755"/>
+    <mass value="0.048884344845398886"/>
+    <inertia ixx="2e-06" ixy="0.0" ixz="-0.0" iyy="1e-05" iyz="-0.0" izz="9e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.078286 -0.075722 -0.045835"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/hcsr04_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.078286 -0.075722 -0.045835"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/hcsr04_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="horn_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-5.106975831115079e-08 1.3209661106280968e-08 0.03284453997922932"/>
+    <mass value="0.0002829494909933873"/>
+    <inertia ixx="0.0" ixy="0.0" ixz="-0.0" iyy="0.0" iyz="-0.0" izz="0.0"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.229786 0.008278 -0.036935"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/horn_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.229786 0.008278 -0.036935"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/horn_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-5.712622649922672e-07 -0.014755631576454944 -0.0010994399547935504"/>
+    <mass value="0.022659491876204398"/>
+    <inertia ixx="3e-06" ixy="0.0" ixz="-0.0" iyy="2e-06" iyz="0.0" izz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.229786 -0.011222 -0.055135"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.229786 -0.011222 -0.055135"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/servo_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_fr_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-4.842708241706295e-08 -0.018127091791709904 3.945685182818459e-07"/>
+    <mass value="0.168011214491764"/>
+    <inertia ixx="6.8e-05" ixy="-0.0" ixz="-0.0" iyy="0.000114" iyz="-0.0" izz="6.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.009966 0.099378 -0.034485"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/wheel_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.009966 0.099378 -0.034485"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/wheel_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_fr_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0026419201691951777 -0.009344089364072758 -0.00864962528426276"/>
+    <mass value="0.11062030248941061"/>
+    <inertia ixx="8e-06" ixy="-2e-06" ixz="-0.0" iyy="4.6e-05" iyz="-0.0" izz="4.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.030536 0.079478 -0.043135"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/motor_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.030536 0.079478 -0.043135"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/motor_fr_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_br_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-4.845424975141732e-08 -0.018127091791710334 3.9456851823327366e-07"/>
+    <mass value="0.1680112144917677"/>
+    <inertia ixx="6.8e-05" ixy="-0.0" ixz="-0.0" iyy="0.000114" iyz="-0.0" izz="6.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.225606 0.099378 -0.034485"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/wheel_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.225606 0.099378 -0.034485"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/wheel_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_br_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0026418102191671233 -0.009344090304755526 -0.008649625742520761"/>
+    <mass value="0.11062026520763492"/>
+    <inertia ixx="8e-06" ixy="2e-06" ixz="0.0" iyy="4.6e-05" iyz="0.0" izz="4.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.205036 0.079478 -0.043135"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/motor_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.205036 0.079478 -0.043135"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/motor_br_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_bl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-5.2329374750081925e-08 0.01812711825986646 3.945685182957237e-07"/>
+    <mass value="0.16801121449176495"/>
+    <inertia ixx="6.8e-05" ixy="-0.0" ixz="0.0" iyy="0.000114" iyz="0.0" izz="6.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.225606 -0.082822 -0.034485"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/wheel_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.225606 -0.082822 -0.034485"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/wheel_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_bl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.002641819442415372 0.009344115834315034 -0.008649625284262712"/>
+    <mass value="0.11062030248941077"/>
+    <inertia ixx="8e-06" ixy="-2e-06" ixz="0.0" iyy="4.6e-05" iyz="0.0" izz="4.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.205036 -0.062922 -0.043135"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/motor_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.205036 -0.062922 -0.043135"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/motor_bl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_fl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-5.230220704449673e-08 0.018127118259866987 3.9456851833041817e-07"/>
+    <mass value="0.16801121449176645"/>
+    <inertia ixx="6.8e-05" ixy="-0.0" ixz="0.0" iyy="0.000114" iyz="0.0" izz="6.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.009966 -0.082822 -0.034485"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/wheel_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.009966 -0.082822 -0.034485"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/wheel_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_fl_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.002641910945947047 0.009344116774997788 -0.008649625742520761"/>
+    <mass value="0.11062026520763493"/>
+    <inertia ixx="8e-06" ixy="2e-06" ixz="-0.0" iyy="4.6e-05" iyz="-0.0" izz="4.6e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.030536 -0.062922 -0.043135"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/motor_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.030536 -0.062922 -0.043135"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/motor_fl_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<!-- Hokuyo Laser -->
+<link name="hokuyo_link">
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+  <box size="0.1 0.1 0.1"/>
+    </geometry>
+  </collision>
+
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://adbot_description/meshes/lidar_1.stl"/>
+    </geometry>
+  </visual>
+
+  <inertial>
+    <mass value="1e-5" />
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+  </inertial>
+</link>
+
+<!-- Camera -->
+<link name="camera_link">
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+  <box size="0.0067 0.025 0.024"/>
+    </geometry>
+  </collision>
+
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+  <box size="0.0067 0.025 0.025"/>
+    </geometry>
+    <material name="red"/>
+  </visual>
+
+  <inertial>
+    <mass value="1e-5" />
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+  </inertial>
+</link>
+
+<joint name="base_body" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.117786 -0.008278 0.051635"/>
+  <parent link="base_link"/>
+  <child link="body_1"/>
+</joint>
+
+<joint name="lid_body" type="fixed">
+  <origin rpy="0 0 0" xyz="0.122 -0.077 0.137"/>
+  <parent link="body_1"/>
+  <child link="lid_1"/>
+</joint>
+
+<joint name="right_door" type="revolute">
+  <origin rpy="0 0 0" xyz="-0.027 -0.002 0.147"/>
+  <parent link="body_1"/>
+  <child link="right_door_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+  <limit effort="100" lower="0.0" upper="1.570796" velocity="100"/>
+</joint>
+
+<joint name="left_door" type="revolute">
+  <origin rpy="0 0 0" xyz="-0.027 0.08 0.147"/>
+  <parent link="body_1"/>
+  <child link="left_door_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+  <limit effort="100" lower="0.0" upper="1.570796" velocity="100"/>
+</joint>
+
+<joint name="lidar_body" type="fixed">
+  <origin rpy="0 0 0" xyz="0.00862 -0.027617 0.1204"/>
+  <parent link="body_1"/>
+  <child link="lidar_1"/>
+</joint>
+
+<joint name="camera_lid" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0015 0.077 -0.024"/>
+  <parent link="lid_1"/>
+  <child link="camera_1"/>
+</joint>
+
+<joint name="hcsr04_front" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.064 -0.1288"/>
+  <parent link="lid_1"/>
+  <child link="hcsr04_front_1"/>
+</joint>
+
+<joint name="hcsr04_right" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0395 -0.084 -0.0058"/>
+  <parent link="body_1"/>
+  <child link="hcsr04_right_1"/>
+</joint>
+
+<joint name="hcsr04_left" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0395 0.084 -0.0058"/>
+  <parent link="body_1"/>
+  <child link="hcsr04_left_1"/>
+</joint>
+
+<joint name="servo_horn" type="revolute">
+  <origin rpy="0 0 0" xyz="0.0 -0.0195 -0.0182"/>
+  <parent link="servo_1"/>
+  <child link="horn_1"/>
+  <axis xyz="-0.0 -0.0 1.0"/>
+  <limit effort="100" lower="0.0" upper="0.523599" velocity="100"/>
+</joint>
+
+<joint name="servo_body" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.112 0.0195 0.0035"/>
+  <parent link="body_1"/>
+  <child link="servo_1"/>
+</joint>
+
+<joint name="wheel_motor_fr" type="continuous">
+  <origin rpy="0 0 0" xyz="0.02057 -0.0199 -0.00865"/>
+  <parent link="motor_fr_1"/>
+  <child link="wheel_fr_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="motor_base_fr" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.030536 -0.079478 0.043135"/>
+  <parent link="base_link"/>
+  <child link="motor_fr_1"/>
+</joint>
+
+<joint name="wheel_motor_br" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.02057 -0.0199 -0.00865"/>
+  <parent link="motor_br_1"/>
+  <child link="wheel_br_1"/>
+  <axis xyz="0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="motor_base_br" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.205036 -0.079478 0.043135"/>
+  <parent link="base_link"/>
+  <child link="motor_br_1"/>
+</joint>
+
+<joint name="wheel_motor_bl" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.02057 0.0199 -0.00865"/>
+  <parent link="motor_bl_1"/>
+  <child link="wheel_bl_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="motor_base_bl" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.205036 0.062922 0.043135"/>
+  <parent link="base_link"/>
+  <child link="motor_bl_1"/>
+</joint>
+
+<joint name="wheel_motor_fl" type="continuous">
+  <origin rpy="0 0 0" xyz="0.02057 0.0199 -0.00865"/>
+  <parent link="motor_fl_1"/>
+  <child link="wheel_fl_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="motor_base_fl" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.030536 0.062922 0.043135"/>
+  <parent link="base_link"/>
+  <child link="motor_fl_1"/>
+</joint>
+
+<joint name="hokuyo_joint" type="fixed">
+  <axis xyz="0 1 0" />
+  <origin xyz="-0.081681 0.007799 0.229235" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="hokuyo_link"/>
+</joint>
+
+<joint name="camera_joint" type="fixed">
+  <axis xyz="0 1 0" />
+  <origin xyz="0.01191 -0.00827 0.16718" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="camera_link"/>
+</joint>
+
+</robot>
