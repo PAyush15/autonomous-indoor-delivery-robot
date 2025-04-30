@@ -57,19 +57,17 @@ autonomous-indoor-delivery-robot-main/
 ├── 📜 rosserial.ino                # Arduino code for servo/buzzer control
 
 ├── 📂 adbot_description/           # URDF and package description for adbot
-├── 📂 config/                      # ROS configuration and parameter files
-├── 📂 launch/                      # Launch files for simulation and real-world runs
-├── 📂 maps/                        # Saved maps for navigation
-├── 📂 meshes/                      # STL files for 3D components
-├── 📂 params/                      # Navigation parameter files (e.g., global_costmap_params.yaml)
-├── 📂 scripts/                     # ROS Python nodes for robot behavior
-├── 📂 urdf/                        # URDF files of the robot
-├── 📂 worlds/                      # Custom Gazebo world files
+│   ├── 📂 config/                      # ROS configuration and parameter files
+│   ├── 📂 launch/                      # Launch files for simulation and real-world runs
+│   ├── 📂 maps/                        # Saved maps for navigation
+│   ├── 📂 meshes/                      # STL files for 3D components
+│   ├── 📂 params/                      # Navigation parameter files (e.g., global_costmap_params.yaml)
+│   ├── 📂 scripts/                     # ROS Python nodes for robot behavior
+│   ├── 📂 urdf/                        # URDF files of the robot
+│   ├── 📂 worlds/                      # Custom Gazebo world files
+│   ├── 📜 CMakeLists.txt               # Build instructions for catkin
+│   ├── 📜 package.xml                  # ROS package metadata
 
-├── 📜 CMakeLists.txt               # Build instructions for catkin
-├── 📜 package.xml                  # ROS package metadata
-
-├── 📂 gbot_core/                   # (Empty or reserved for future logic)
 ├── 📂 rmp_bot_description/         # URDF and package description for rmp_bot
 │   ├── 📜 CMakeLists.txt
 │   ├── 📜 LICENSE
