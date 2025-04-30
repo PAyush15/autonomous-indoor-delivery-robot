@@ -19,23 +19,51 @@ Autonomous delivery robot with real-time obstacle avoidance
 
 ## Overview
 
-This projects aimed to develop a robot to be operated autonomously for indoor environments. Some use cases for the robot are as a hospital helpler robot or a office robot. 
+Autonomous Delivery Robot with Real-Time Obstacle Avoidance is a ROS-based indoor robot designed to automate goods delivery in places like offices, malls, and hospitals. It navigates autonomously using LiDAR and the ROS Navigation Stack, avoids static and dynamic obstacles, and delivers items securely using QR code-based authentication.
 
-The complete robot was designed and 3D printed from scratch at the BVM College, Vallabhvidhyanagar, India by me and my team.
+Built with a 3D-printed chassis and powered by Jetson Nano, the robot includes dual delivery compartments, a live camera feed, and multiple control modes—manual (teleop), scripted, and fully autonomous. Mapping and localization are handled via Cartographer SLAM, and the full system was tested in Gazebo and RViz before real-world deployment.
 
-The robot has compartments in which items can be stored and locked using the servo motor for secure delivery purpose. The robot containes a LIDAR sensor for navigation, ultrasonic sensor for small obstacle detection and camera for QR-code detection. It is battery-operated and rechargable.
-
-Checkout this youtube video to get a better idea about the whole project: https://youtu.be/cQoGame0wjs?si=AdC91IklvggS6s9D
 
 ## Demo
 
-
-https://github.com/user-attachments/assets/7eeee20a-cd4c-49b7-a1a6-13b96f69f56d
+https://github.com/user-attachments/assets/71b35f18-758d-4af4-b2c4-f475b9f0dad2
 
 
 ## Features
 
+Autonomous Indoor Navigation using ROS Navigation Stack and Cartographer SLAM
+
+Real-Time Obstacle Avoidance with 2D LiDAR and ultrasonic sensors
+
+Secure Delivery with QR code-based compartment unlocking
+
+Live Video Streaming via Raspberry Pi camera
+
+Multiple Control Modes: teleoperation, scripted navigation, autonomous mode
+
+Modular 3D-Printed Design with dual delivery compartments
+
+URDF Model Integration for simulation and parameter tuning
+
+Tested in Simulation (Gazebo + RViz) before deployment
+
+
+
 ## Project Structure
+
+📦 autonomous-delivery-robot/
+├── 📂 src/                  # Python and C++ scripts for navigation, QR code reading, etc.
+├── 📂 urdf/                 # Robot model files (URDF/Xacro)
+├── 📂 meshes/               # STL files for 3D components
+├── 📂 config/               # ROS configuration and parameter files
+├── 📂 launch/               # Launch files for simulation and real-world runs
+├── 📂 models/               # Trained model or marker data (if used)
+├── 📂 docs/                 # Project documentation and images
+├── 📜 CMakeLists.txt        # Build instructions (if using ROS2 or C++)
+├── 📜 package.xml           # ROS package definition
+├── 📜 requirements.txt      # Python dependencies (for QR, OpenCV, etc.)
+└── 📜 README.md
+
 
 ## Installation
 
