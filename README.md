@@ -5,15 +5,22 @@ Autonomous delivery robot with real-time obstacle avoidance
 
 📌 Table of Contents
 [Overview](#overview)
+
 [Demo](#demo)
+
 [Features](#features)
+
 [Project Structure](#projectstructure)
+
 [Installation](#installation)
+
 [Usage](#usage)
+
 [Hardware Details](#hardwaredetails)
+
 [Model Files](#modelfiles)
-[Contributing](#contributing)
-[License](#license)
+[Contributing](#contributing)\
+[License](#license)/
 [Acknowledgments](#acknowledgments)
 
 ## Overview
