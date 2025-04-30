@@ -68,22 +68,22 @@ https://github.com/user-attachments/assets/71b35f18-758d-4af4-b2c4-f475b9f0dad2
 
 📦 Prerequisites
 Ensure you have ROS Noetic installed on Ubuntu 20.04. If not, install it:
-'''bash
+```bash
 sudo apt update
 sudo apt install ros-noetic-desktop-full
-  '''
+  ```
 Initialize rosdep and set up your environment:
 
-'''bash
+```bash
 sudo rosdep init
 rosdep update
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
-  '''
+  ```
 
 Install Required ROS Packages
 
-'''bash
+```bash
 sudo apt install -y \
   ros-noetic-navigation \
   ros-noetic-slam-gmapping \
@@ -99,7 +99,7 @@ sudo apt install -y \
   python3-rosinstall \
   python3-vcstools \
   python3-catkin-tools
-  '''
+  ```
   
 Clone and Build the Package
 
