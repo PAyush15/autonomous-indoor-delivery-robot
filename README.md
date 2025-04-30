@@ -1,9 +1,6 @@
-# Autonomous-delivery-robot
+# Autonomous-delivery-robot-with-real-time-obstacle-avoidance
 
-🦾 Project Title
-Autonomous delivery robot with real-time obstacle avoidance
-
-📌 Table of Contents:
+Table of Contents:
 
   [Overview](#overview)\
   [Demo](#demo)\
@@ -52,16 +49,16 @@ Tested in Simulation (Gazebo + RViz) before deployment
 ## Project Structure
 
 📦 autonomous-delivery-robot/
-├── 📂 src/                  # Python and C++ scripts for navigation, QR code reading, etc.
-├── 📂 urdf/                 # Robot model files (URDF/Xacro)
-├── 📂 meshes/               # STL files for 3D components
 ├── 📂 config/               # ROS configuration and parameter files
 ├── 📂 launch/               # Launch files for simulation and real-world runs
-├── 📂 models/               # Trained model or marker data (if used)
-├── 📂 docs/                 # Project documentation and images
+├── 📂 maps/               # Launch files for simulation and real-world runs
+├── 📂 meshes/               # STL files for 3D components
+├── 📂 params/               # Parameters for Navigation (Ex. global_costmap_params.yaml)
+├── 📂 scripts/               # ROS nodes for the robot
+├── 📂 urdf/               # URDF files of the robot
+├── 📂 worlds/               # Gazebo worlds files
 ├── 📜 CMakeLists.txt        # Build instructions (if using ROS2 or C++)
 ├── 📜 package.xml           # ROS package definition
-├── 📜 requirements.txt      # Python dependencies (for QR, OpenCV, etc.)
 └── 📜 README.md
 
 
