@@ -3,7 +3,8 @@
 🦾 Project Title
 Autonomous delivery robot with real-time obstacle avoidance
 
-📌 Table of Contents
+📌 Table of Contents:
+
 [Overview](#overview)
 
 [Demo](#demo)
