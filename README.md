@@ -48,7 +48,7 @@ https://github.com/user-attachments/assets/71b35f18-758d-4af4-b2c4-f475b9f0dad2
 
 ## Project Structure
 
-├── 📂 autonomous-indoor-delivery-robot-main/
+├── 📂 autonomous-indoor-delivery-robot-main/\
   ├── 📜 README.md\
   ├── 📜 qrcode_scan.py                  # QR code detection script (Jetson Nano + Pi Cam)\
   ├── 📜 rosserial.ino                   # Arduino code for servo/buzzer control\
@@ -165,7 +165,6 @@ Finally, launch the navigation launch file with the parameter file path
 
 ## Hardware Details
 
-### 🔩 Hardware Components
 
 | Component              | Description                                                              | Quantity |
 |------------------------|---------------------------------------------------------------------------|----------|
