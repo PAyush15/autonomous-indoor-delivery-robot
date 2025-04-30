@@ -2,16 +2,16 @@
 
 Table of Contents:
 
-  - [Overview](#overview)\
-  - [Demo](#demo)\
-  - [Features](#features)\
-  - [Project Structure](#projectstructure)\
-  - [Installation](#installation)\
-  - [Usage](#usage)\
-  - [Hardware Details](#hardwaredetails)\
-  - [Model Files](#modelfiles)\
-  - [Contributing](#contributing)\
-  - [License](#license)\
+  - [Overview](#overview)
+  - [Demo](#demo)
+  - [Features](#features)
+  - [Project Structure](#projectstructure)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Hardware Details](#hardwaredetails)
+  - [Model Files](#modelfiles)
+  - [Contributing](#contributing)
+  - [License](#license)
   - [Acknowledgments](#acknowledgments)
 
 ## Overview
@@ -80,6 +80,7 @@ echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 🔧 Install Required ROS Packages
+
 sudo apt install -y \
   ros-noetic-navigation \
   ros-noetic-slam-gmapping \
@@ -98,7 +99,7 @@ sudo apt install -y \
   
 📁 Clone and Build the Package
 
-# Create a catkin workspace
+```bash
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 
@@ -108,7 +109,10 @@ git clone https://github.com/yourusername/autonomous-delivery-robot.git
 # Build the workspace
 cd ~/catkin_ws
 catkin build
+
+# Source the setup file
 source devel/setup.bash
+```
 
 ## Usage
 
