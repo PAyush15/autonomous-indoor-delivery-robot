@@ -19,10 +19,10 @@ Autonomous delivery robot with real-time obstacle avoidance
 
 [Hardware Details](#hardwaredetails)
 
-[Model Files](#modelfiles)
+[Model Files](#modelfiles)\
 [Contributing](#contributing)\
-[License](#license)/
-[Acknowledgments](#acknowledgments)
+[License](#license)\
+[Acknowledgments](#acknowledgments)\
 
 ## Overview
 
