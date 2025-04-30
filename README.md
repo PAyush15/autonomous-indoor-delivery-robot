@@ -48,30 +48,38 @@ https://github.com/user-attachments/assets/71b35f18-758d-4af4-b2c4-f475b9f0dad2
 
 ## Project Structure
 
-├── 📂 autonomous-indoor-delivery-robot-main/\
-  ├── 📜 README.md\
-  ├── 📜 qrcode_scan.py                  # QR code detection script (Jetson Nano + Pi Cam)\
-  ├── 📜 rosserial.ino                   # Arduino code for servo/buzzer control\
-  ├── 📂 adbot_description/             # URDF and package description for adbot\
-    ├── 📂 config/               # ROS configuration and parameter files\
-    ├── 📂 launch/               # Launch files for simulation and real-world runs\
-    ├── 📂 maps/               # Launch files for simulation and real-world runs\
-    ├── 📂 meshes/               # STL files for 3D components\
-    ├── 📂 params/               # Parameters for Navigation (Ex. global_costmap_params.yaml)\
-    ├── 📂 scripts/               # ROS nodes for the robot\
-    ├── 📂 urdf/               # URDF files of the robot\
-    ├── 📂 worlds/               # Gazebo worlds files\
-    ├── 📜 CMakeLists.txt        # Build instructions (if using ROS2 or C++)\
-    ├── 📜 package.xml           # ROS package definition\
-  ├── 📂 gbot_core/\
-  ├── 📂 rmp_bot_description/          # URDF and package description for rmp_bot\
-    ├── 📜 CMakeLists.txt\
-    ├── 📜 LICENSE\
-    ├── 📜 package.xml\
-  ├── 📂 ros_controllers-melodic-devel/ # External ROS control package fork\
-    ├── 📜 .gitignore\
-    ├── 📜 .travis.yml\
-    ├── 📜 README.md\
+### 📁 Project Structure
+
+```plaintext
+autonomous-indoor-delivery-robot-main/
+├── 📜 README.md                     # Project overview and documentation
+├── 📜 qrcode_scan.py               # QR code detection script (Jetson Nano + Pi Cam)
+├── 📜 rosserial.ino                # Arduino code for servo/buzzer control
+
+├── 📂 adbot_description/           # URDF and package description for adbot
+├── 📂 config/                      # ROS configuration and parameter files
+├── 📂 launch/                      # Launch files for simulation and real-world runs
+├── 📂 maps/                        # Saved maps for navigation
+├── 📂 meshes/                      # STL files for 3D components
+├── 📂 params/                      # Navigation parameter files (e.g., global_costmap_params.yaml)
+├── 📂 scripts/                     # ROS Python nodes for robot behavior
+├── 📂 urdf/                        # URDF files of the robot
+├── 📂 worlds/                      # Custom Gazebo world files
+
+├── 📜 CMakeLists.txt               # Build instructions for catkin
+├── 📜 package.xml                  # ROS package metadata
+
+├── 📂 gbot_core/                   # (Empty or reserved for future logic)
+├── 📂 rmp_bot_description/         # URDF and package description for rmp_bot
+│   ├── 📜 CMakeLists.txt
+│   ├── 📜 LICENSE
+│   ├── 📜 package.xml
+
+├── 📂 ros_controllers-melodic-devel/  # External ROS control package fork
+│   ├── 📜 .gitignore
+│   ├── 📜 .travis.yml
+│   ├── 📜 README.md
+```
 
 
 
