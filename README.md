@@ -71,7 +71,7 @@ Ensure you have ROS Noetic installed on Ubuntu 20.04. If not, install it:
 '''bash
 sudo apt update
 sudo apt install ros-noetic-desktop-full
-'''
+  '''
 Initialize rosdep and set up your environment:
 
 '''bash
@@ -79,7 +79,7 @@ sudo rosdep init
 rosdep update
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
-'''
+  '''
 
 Install Required ROS Packages
 
