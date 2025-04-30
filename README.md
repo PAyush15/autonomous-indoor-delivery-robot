@@ -29,6 +29,10 @@ Checkout this youtube video to get a better idea about the whole project: https:
 
 ## Demo
 
+
+https://github.com/user-attachments/assets/7eeee20a-cd4c-49b7-a1a6-13b96f69f56d
+
+
 ## Features
 
 ## Project Structure
