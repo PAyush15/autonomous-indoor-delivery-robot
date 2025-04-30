@@ -23,7 +23,7 @@ Built with a 3D-printed chassis and powered by Jetson Nano, the robot includes d
 
 https://github.com/user-attachments/assets/71b35f18-758d-4af4-b2c4-f475b9f0dad2
 
-
+Checkout the full video here: https://youtu.be/cQoGame0wjs?si=Tl-N0QOnwe30VAT1
 ## Features
 
 - **Autonomous Indoor Navigation** using ROS Navigation Stack and Cartographer SLAM
