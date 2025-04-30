@@ -50,7 +50,7 @@ https://github.com/user-attachments/assets/71b35f18-758d-4af4-b2c4-f475b9f0dad2
 
 ## Project Structure
 
-📦 autonomous-delivery-robot/
+📦 autonomous-delivery-robot/\
 ├── 📂 config/               # ROS configuration and parameter files\
 ├── 📂 launch/               # Launch files for simulation and real-world runs\
 ├── 📂 maps/               # Launch files for simulation and real-world runs\
@@ -68,20 +68,22 @@ https://github.com/user-attachments/assets/71b35f18-758d-4af4-b2c4-f475b9f0dad2
 
 📦 Prerequisites
 Ensure you have ROS Noetic installed on Ubuntu 20.04. If not, install it:
-
+'''
 sudo apt update
 sudo apt install ros-noetic-desktop-full
+'''
 Initialize rosdep and set up your environment:
 
-
+'''
 sudo rosdep init
 rosdep update
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
+'''
 
-🔧 Install Required ROS Packages
+Install Required ROS Packages
 
-sudo apt install -y \
+'''sudo apt install -y \
   ros-noetic-navigation \
   ros-noetic-slam-gmapping \
   ros-noetic-teleop-twist-keyboard \
@@ -96,8 +98,9 @@ sudo apt install -y \
   python3-rosinstall \
   python3-vcstools \
   python3-catkin-tools
+  '''
   
-📁 Clone and Build the Package
+Clone and Build the Package
 
 ```bash
 mkdir -p ~/catkin_ws/src
